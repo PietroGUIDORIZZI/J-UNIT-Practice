@@ -39,6 +39,11 @@ public class CalculatorTest {
         assertEquals("$184,664.43", answer);
     }
 
+    public void annuityPractice() {
+        String answer = calc.calcAnnuity("1200", 10, "0.08", 4);
+        assertEquals("$72,482.38", answer);
+    }
+
 
 
 
