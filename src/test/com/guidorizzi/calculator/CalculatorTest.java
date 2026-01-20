@@ -33,7 +33,7 @@ public class CalculatorTest {
     }
 
     @Test
-    @Disabled
+    @Disabled //or @Ignore
     public void annuityExample() {
         String answer = calc.calcAnnuity("22000", 7, "0.06", 1);
         assertEquals("$184,664.43", answer);
