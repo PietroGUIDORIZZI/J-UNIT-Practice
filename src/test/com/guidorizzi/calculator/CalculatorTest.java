@@ -1,20 +1,35 @@
 package com.guidorizzi.calculator;
 
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorTest {
 
+    private Calculator calc;
+
+
+    //method to create only one instance
+    //and give a hint to JVM garbageCollector
+    //that this instance is eligible to be collected.
+    @BeforeEach
+    void setUp(){
+        calc = new Calculator();
+    }
+
     @Test
     public void canAddZeroPlusZero(){
-        Calculator calc = new Calculator();
         int sum = calc.add(0, 0);
         assertEquals(0, sum, "Was expecting sum of 0");
     }
 
-
+    @Test
+    public void canAddNegativeAndPositive(){
+        int sum = calc.add(-10,2);
+        assertEquals(-8, sum, "Was Expecting sum of -2");
+    }
 
 
 
