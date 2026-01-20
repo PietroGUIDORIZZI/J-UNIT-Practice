@@ -2,6 +2,7 @@ package com.guidorizzi.calculator;
 
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -30,6 +31,15 @@ public class CalculatorTest {
         int sum = calc.add(-10,2);
         assertEquals(-8, sum, "Was Expecting sum of -2");
     }
+
+    @Test
+    @Disabled
+    public void annuityExample() {
+        String answer = calc.calcAnnuity("22000", 7, "0.06", 1);
+        assertEquals("$184,664.43", answer);
+    }
+
+
 
 
 
